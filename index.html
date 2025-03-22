@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmo Runner - Side Scroller Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="stats">
+            <div class="score-container">
+                <span id="score">0</span>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="startButton" class="start-button">PLAY</div>
+        
+        <div class="mobile-controls">
+            <button id="jumpButton" class="jump-button">JUMP</button>
+            <button id="slideButton" class="slide-button">SLIDE</button>
+            <button id="shootButton" class="shoot-button">SHOOT</button>
+        </div>
+        
+        <div id="gameOver" class="game-over-screen hidden">
+            <h2>GAME OVER</h2>
+            <div class="score-display">
+                <div>SCORE: <span id="finalScore">0</span></div>
+            </div>
+
+            <!-- High Score Name Entry Form - Hidden by default, will show if player qualifies -->
+            <div class="name-entry">
+                <h3>NEW HIGH SCORE!</h3>
+                <p>Enter your name (3 chars):</p>
+                <input type="text" id="playerName" maxlength="3" placeholder="AAA">
+                <button id="submitScore">SUBMIT</button>
+            </div>
+            
+            <div class="game-over-buttons">
+                <button id="restartButton" class="restart-button">PLAY AGAIN</button>
+                <button id="viewLeaderboardButton">VIEW LEADERBOARD</button>
+            </div>
+            
+            <!-- Hidden reset high scores trigger -->
+            <div class="reset-trigger" id="resetTrigger"></div>
+            
+            <!-- Hidden password modal -->
+            <div class="password-modal hidden" id="passwordModal">
+                <h4>Enter Password</h4>
+                <input type="password" id="resetPassword">
+                <button id="confirmReset">RESET SCORES</button>
+                <button id="cancelReset">CANCEL</button>
+            </div>
+        </div>
+        
+        <!-- Leaderboard Screen -->
+        <div class="leaderboard-screen" style="display: none;">
+            <h2>HIGH SCORES</h2>
+            <div class="leaderboard-entries"></div>
+            <button id="closeLeaderboard">BACK</button>
+        </div>
+    </div>
+    
+    <!-- Load sprite and asset scripts first -->
+    <script src="assets/images/player/player_sprite.js"></script>
+    <script src="assets/images/obstacles/obstacle_sprite.js"></script>
+    <script src="assets/images/collectibles/item_sprite.js"></script>
+    <script src="assets/images/backgrounds/background_elements.js"></script>
+    
+    <!-- Load main game script -->
+    <script src="game.js" defer></script>
+</body>
+</html>
