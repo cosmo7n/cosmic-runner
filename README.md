@@ -4,7 +4,7 @@ A fun side-scrolling endless runner game built with HTML5, CSS, and vanilla Java
 
 ## Play the Game
 
-You can play the game online at https://YOUR-USERNAME.github.io/cosmic-runner/
+You can play the game online at https://cosmo7n.github.io/cosmic-runner/
 
 ## Game Features
 
